@@ -1,0 +1,46 @@
+Iniciando -> `npm init -y` (Comando para criar o package,json)
+Instalando a primeira dependência no projeto `npm i -D typescript`
+Criando a configuração inicial do Ts `npx tsc --init` e limpar os comentários do arquivo tsconfig.json
+Alteramos o target para ES2020, adicionamos o resolveJsonModule como true 
+E adicionamos o outdir como ./build que é onde ele vai compilar
+
+Iniciando a aplicação
+- criar pasta src e arquivo server.ts
+-> Agora para criar o servidor, instalar o express `npm i express`
+
+Como o express não veio preparado para o TS, foi preciso instalar o @types/express
+Comando: `npm i -D @types/express`
+
+Estruturando o arquivo server.ts 
+E aplicando o comando `npx tsc` para gerar o build
+
+Colocando para rodar
+node ./build/server.js
+
+Instalando o eslint `npm i -D eslint``
+comando `npx eslint --init` 
+Após a sequencia de perguntas, o arquivo .eslintrc.json foi gerado
+Removi todas as rules pois o Prettier vai fazer esse papel
+
+Instalarei com o comando `npm i -D eslint-config-standart`
+E coloco o standart dentro do extends
+
+Agora a vez do Prettier
+npm i -D prettier eslint-config-prettier eslint-plugin-prettier
+Adicionar prettier nos plugins e plugin:prettier/recommended no extendes
+
+Criar arquivo .prettierrc.json
+- Conteúdo no arquivo
+- Adicionar rules no arquivo .eslintrc.json (no arquivo)
+
+Adicionar o organizador de importações
+npm i -D eslint-plugin-import-helpers
+
+Adicionar ele também nos plugins para dizer que está usando ele
+E adicionar a regra de importação.
+
+Instalando o tsx como dependência de desenvolvimento para facilitar a conversão
+npm i -D tsx
+E adicionando o script: `"dev": "tsx watch ./src/server.ts"``
+
+
