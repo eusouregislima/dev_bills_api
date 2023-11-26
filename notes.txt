@@ -44,3 +44,8 @@ npm i -D tsx
 E adicionando o script: `"dev": "tsx watch ./src/server.ts"``
 
 
+Criando o arquivo Dockerfile que conterá a receita de como o Docker precisa criar a aplicação
+Criando o docker-compose.yml que é a receita dessa aplicação, não dessa imagem, mais sim dos containeres
+
+Após essa etapa entrar com o comando `docker-compose up -d`
+ 
